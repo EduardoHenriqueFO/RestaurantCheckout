@@ -3,3 +3,145 @@
     margin: 0px;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+#global {
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.082);
+}
+
+#top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+header h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+hr {
+    background-color: black;
+    height: 2px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.primeiros {
+    border: 2px solid rgba(0, 0, 0, 0.699);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 350px;
+    height: 40px;
+    
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.815);
+}
+
+#pedido-cliente {
+    height: 60px;
+    width: 350px;
+    border: 2px solid rgba(0, 0, 0, 0.699);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 4px;
+    resize: none;
+    overflow: hidden;
+}
+
+#pedido-cliente::placeholder {
+    color: rgba(0, 0, 0, 0.815);
+}
+
+#valores {
+    display: flex;
+    gap: 20px;
+    height: 30px;
+}
+
+#valores input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#valores input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#valor-pedido {
+    border: 2px solid rgba(0, 0, 0, 0.699);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 70px;
+    height: 30px;
+    
+}
+
+#troco {
+    border: 2px solid rgba(0, 0, 0, 0.699);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 70px;
+    height: 30px;
+}
+
+select {
+    border: 2px solid rgba(0, 0, 0, 0.699);
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 80px;
+    color: rgba(0, 0, 0, 0.815);
+    height: 40px;
+}
+
+#botao {
+    height: 40px;
+    width: 90px;
+    border: 2px solid rgba(0, 0, 0, 0.699);
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.815);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: black; 
+}

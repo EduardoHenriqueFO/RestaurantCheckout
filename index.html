@@ -7,31 +7,35 @@
     <title>Pedido</title>
 </head>
 <body>
-    <div>
-        <header>
-            <h1>Restaurante Espaço Gospel</h1>
-            <h2>Pedido# </h2>
-        </header>
-    </div>
-<hr>
-    <div>
-        <main>
-            <form action="" autocomplete="new-password">
-                <input type="text" name="nome" id="nome-cliente" placeholder="Nome" autocomplete="new-password">
-                <input type="tel" name="telefone" id="fone-cliente" placeholder="Telefone" autocomplete="new-password">
-                <input type="text" name="endereco" id="endereco-cliente" placeholder="Endereço" autocomplete="new-password">
-                <input type="text" name="pedido" id="pedido-cliente" placeholder="Pedido" autocomplete="new-password">
-                <input type="number" name="valor" id="valor-pedido" placeholder="Valor" autocomplete="new-password">
-                <select name="paganeto" id="pagamento">
-                    <option value="cartao">Cartão</option>
-                    <option value="pix">Pix</option>
-                    <option value="din">Dinheiro</option>
-                    <option value="troco">Troco</option>
-                </select>
-                <input type="number" name="troco" id="troco" placeholder="Valor do troco">
-                <input type="submit" value="Finalizar">
-            </form>
-        </main>
+    <div id="global">
+        <div id="top">
+            <header>
+                <h1>Restaurante Espaço Gospel</h1>
+                <h2>Pedido# </h2>
+            </header>
+        </div>
+        <hr>
+        <div id="container">
+            <main>
+                <form action="" autocomplete="new-password">
+                    <input type="text" name="nome" id="nome-cliente" placeholder="Nome" autocomplete="new-password" class="primeiros">
+                    <input type="tel" name="telefone" id="fone-cliente" placeholder="Telefone" autocomplete="new-password" maxlength="16" class="primeiros">
+                    <input type="text" name="endereco" id="endereco-cliente" placeholder="Endereço" autocomplete="new-password" class="primeiros">
+                    <textarea name="pedido" id="pedido-cliente" placeholder="Pedido"></textarea>
+                    <div id="valores">
+                        <input type="number" name="valor" id="valor-pedido" placeholder="Valor" autocomplete="new-password">
+                        <select name="pagamento" id="pagamento">
+                            <option value="cartao">Cartão</option>
+                            <option value="pix">Pix</option>
+                            <option value="din">Dinheiro</option>
+                            <option value="troco">Troco</option>
+                        </select>
+                        <input type="number" name="troco" id="troco" placeholder="Troco">
+                    </div>
+                    <input type="submit" value="Finalizar" id="botao">
+                </form>
+            </main>
+        </div>
     </div>
 </body>
 </html>
