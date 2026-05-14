@@ -2,7 +2,8 @@ let pedidosPendentes = [];
 let pedidosEmProducao = [];
 let pedidosFinalizados = [];
 let ultimoId = 0;
-
+document.getElementById('numero-do-pedido-landing').textContent =
+  `Pedido# ${ultimoId + 1}`;
 function exibirModalDeConfirmacaoDePedido(pedido) {
   document.getElementById('nome-cliente-modal').textContent = pedido.nome;
   document.getElementById('fone-cliente-modal').textContent = pedido.telefone;
@@ -33,7 +34,7 @@ function finalizarPedido(event) {
   let valorDoPedido = document.getElementById('valor-pedido').value;
   let valorDoTroco = document.getElementById('troco').value;
   let formaDePagamento = document.getElementById('pagamento').value;
-  numeroDoPedido = ultimoId;
+  let numeroDoPedido = ultimoId;
   let pedido = {
     nome: nome,
     telefone: telefone,
@@ -54,6 +55,8 @@ function confirmarPedido() {
   fecharModalDeConfirmacaoDePedido();
   limparFormulario();
   ultimoId++;
+  document.getElementById('numero-do-pedido-landing').textContent =
+    `Pedido# ${ultimoId + 1}`;
 }
 
 function limparFormulario() {
@@ -65,3 +68,16 @@ function limparFormulario() {
   document.getElementById('fone-cliente').value = '';
   document.getElementById('endereco-cliente').value = '';
 }
+
+let selectPagamento = document.getElementById('pagamento');
+let campoTroco = document.getElementById('troco');
+
+campoTroco.style.display = 'none';
+
+selectPagamento.addEventListener('change', function () {
+  if (selectPagamento.value == 'troco') {
+    campoTroco.style.display = 'flex';
+  } else {
+    campoTroco.style.display = 'none';
+  }
+});
