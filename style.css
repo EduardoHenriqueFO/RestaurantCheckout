@@ -132,10 +132,6 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-#valores input[type=number] {
-    -moz-appearance: textfield;
-}
-
 #valor-pedido {
     border: 2px solid rgba(0, 0, 0, 0.699);
     border-radius: 5px;
