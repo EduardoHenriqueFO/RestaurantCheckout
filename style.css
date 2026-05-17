@@ -3,6 +3,74 @@
   margin: 0px;
 }
 
+/* 1. Garante que o padding e a borda fiquem dentro do tamanho total do elemento */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove margens e paddings padrões de elementos comuns */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Garante que a altura da página ocupe 100% da viewport e melhora a rolagem */
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* 4. Melhora a renderização de fontes e define uma altura de linha padrão */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 5. Facilita o trabalho com imagens e mídias responsivas */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Herda fontes para elementos de formulário (que por padrão não herdam do body) */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Remove estilos padrão de listas (comum para menus de navegação) */
+ol, ul {
+  list-style: none;
+}
+
+/* 8. Evita que tabelas fiquem desalinhadas */
+table {
+  border-collapse: collapse;
+}
+
+/* 9. Reseta links para que herdem a cor do texto e não tenham sublinhado por padrão */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 10. Garante acessibilidade: respeita a escolha do usuário de reduzir animações */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 .modalDeConfirmacaoDePedido {
   display: none;
   position: fixed;
@@ -39,47 +107,44 @@
 
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100dvh;
-}
-
-#global {
-    border: 2px solid black;
-    border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.082);
+    width: 100dvw;
 }
 
 #top {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center
-}
-
-header h2 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-hr {
-    background-color: black;
-    height: 2px;
-    border: none;
-    margin-bottom: 30px;
 }
 
 #container {
     display: flex;
-    justify-content: center;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+#left {
+    width: 20%;
+    border-right: 2px solid black;
+}
+
+aside {
+    display:flex;
+    flex-direction: column;
+}
+
+button {
+    height: 100px;
+
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    background-color: #E6EFF6;
 }
 
 form {

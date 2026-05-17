@@ -1,0 +1,143 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+/* 1. Garante que o padding e a borda fiquem dentro do tamanho total do elemento */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove margens e paddings padrões de elementos comuns */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Garante que a altura da página ocupe 100% da viewport e melhora a rolagem */
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* 4. Melhora a renderização de fontes e define uma altura de linha padrão */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 5. Facilita o trabalho com imagens e mídias responsivas */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Herda fontes para elementos de formulário (que por padrão não herdam do body) */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Remove estilos padrão de listas (comum para menus de navegação) */
+ol, ul {
+  list-style: none;
+}
+
+/* 8. Evita que tabelas fiquem desalinhadas */
+table {
+  border-collapse: collapse;
+}
+
+/* 9. Reseta links para que herdem a cor do texto e não tenham sublinhado por padrão */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 10. Garante acessibilidade: respeita a escolha do usuário de reduzir animações */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#top {
+    margin: 20px;
+    text-decoration: underline;
+    
+}
+
+#mid {
+    display: flex;
+    align-items: center;
+    height: 90dvh;
+    width: 100dvw;
+    border-top: 2px solid black;
+}
+
+#mid-left {
+    width: 20%;
+    height: 90dvh;
+    border-right: 2px solid black;
+}
+
+#mid-right {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    height: 90dvh;
+    background-color: #E6EFF6;
+}
+
+aside {
+    display:flex;
+    flex-direction: column;
+}
+
+button {
+    height: 100px;
+
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    width: 250px;
+    padding: 10px;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
+}
+
+.kids {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.father {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    gap: 20px;
+}
